@@ -5,8 +5,10 @@
 name: S2I build and push
 on: [push, workflow_dispatch, pull_request]
 env:
-  IMAGE_REGISTRY: docker.io
-  REGISTRY_USER: gerbigma
+  REGISTRY_USER: mgerbig
+  IMAGE_REGISTRY: default-route-openshift-image-registry.apps.scale-b30107f7.scale-sdbx-az.valinor.fr
+  #IMAGE_REGISTRY: docker.io
+  #REGISTRY_USER: gerbigma
   APP_NAME: petclinic
   IMAGE_TAGS: latest
 
