@@ -85,6 +85,7 @@ jobs:
   build-push-image:
     name: Build and Push to Quay
     runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/master'
     needs: compile
     outputs:
       registry-path: ${{ steps.push-to-quay.outputs.registry-path }}
@@ -130,6 +131,7 @@ jobs:
   openshift-deploy:
     name: Deploy on OpenShift
     runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/master'
     needs: [ build-push-image, compile ]
     env:
       IMAGE_PATH: ${{ needs.build-push-image.outputs.registry-path }}
