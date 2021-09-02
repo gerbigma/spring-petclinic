@@ -3,9 +3,10 @@ on: [ push, workflow_dispatch ]
 
 env:
   IMAGE_REGISTRY: docker.io
-  REGISTRY_USER: gerbigma  REGISTRY_USER: mgerbig
+  REGISTRY_USER: gerbigma
+  #REGISTRY_USER: mgerbig
   #IMAGE_REGISTRY: default-route-openshift-image-registry.apps.scale-b30107f7.scale-sdbx-az.valinor.fr
-  #TEST_NAMESPACE: gerbigma
+  TEST_NAMESPACE: gerbigma
   APP_NAME: petclinic
   APP_PORT: 8080
   TEAR_DOWN: false
